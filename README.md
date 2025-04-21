@@ -28,9 +28,7 @@ sudo bash setup.sh
 
 ### 3. Jalankan MobSF + Emulator
 ```bash
-chmod +x /opt/dynamic-mobsf/run_dynamic_mobsf.sh
-
-bash /opt/dynamic-mobsf/run_dynamic_mobsf.sh
+bash /opt/dynamic-mobsf/run_mobsf.sh
 ```
 
 ### 4. Buka MobSF di Browser
