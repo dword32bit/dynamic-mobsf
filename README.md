@@ -55,7 +55,3 @@ http://127.0.0.1:8000
 
 ## 🤝 Kontribusi
 Pull request sangat diterima! Silakan buat issue untuk bug atau fitur baru.
-
-## 📄 Lisensi
-MIT License.
-
