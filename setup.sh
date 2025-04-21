@@ -9,7 +9,7 @@ AVD_NAME="dummy28"
 ANDROID_API=28
 MOBSF_REPO="https://github.com/MobSF/Mobile-Security-Framework-MobSF.git"
 MOBSF_DIR="$INSTALL_DIR/Mobile-Security-Framework-MobSF"
-FRIDA_SERVER_ZIP_URL="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/assets/frida-server.zip"
+FRIDA_SERVER_ZIP_URL="https://github.com/dword32bit/dynamic-mobsf/releases/download/frida/frida-server.zip"
 FRIDA_SERVER_ZIP="$INSTALL_DIR/assets/frida-server.zip"
 
 if [ "$EUID" -ne 0 ]; then
