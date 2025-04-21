@@ -17,8 +17,8 @@ Semua file akan diinstal di direktori berikut:
 ## 🛠️ Cara Menggunakan
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/NAMA_KAMU/dynamic-mobsf-setup.git
-cd dynamic-mobsf-setup
+git clone https://github.com/dword32bit/dynamic-mobsf.git
+cd dynamic-mobsf
 ```
 
 ### 2. Upload `frida-server.zip`
@@ -27,7 +27,7 @@ Upload file `frida-server.zip` ke halaman **Releases** di GitHub kamu. File ini 
 
 ### 3. Jalankan Script Instalasi
 ```bash
-sudo bash setup_dynamic_mobsf.sh
+sudo bash setup.sh
 ```
 
 ### 4. Jalankan MobSF + Emulator
