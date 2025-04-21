@@ -21,21 +21,17 @@ git clone https://github.com/dword32bit/dynamic-mobsf.git
 cd dynamic-mobsf
 ```
 
-### 2. Upload `frida-server.zip`
-Upload file `frida-server.zip` ke halaman **Releases** di GitHub kamu. File ini harus berisi:
-- `frida-server` binary untuk arsitektur x86_64 (atau yang sesuai dengan emulator kamu)
-
-### 3. Jalankan Script Instalasi
+### 2. Jalankan Script Instalasi
 ```bash
 sudo bash setup.sh
 ```
 
-### 4. Jalankan MobSF + Emulator
+### 3. Jalankan MobSF + Emulator
 ```bash
 bash /opt/dynamic-mobsf/run_dynamic_mobsf.sh
 ```
 
-### 5. Buka MobSF di Browser
+### 4. Buka MobSF di Browser
 ```
 http://127.0.0.1:8000
 ```
