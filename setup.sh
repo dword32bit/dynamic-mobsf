@@ -62,29 +62,9 @@ unzip -q "$FRIDA_SERVER_ZIP" -d "$INSTALL_DIR/frida"
 chmod +x "$INSTALL_DIR/frida/frida-server"
 
 echo "[+] Creating run script..."
-cat <<EOF > "$INSTALL_DIR/run_dynamic_mobsf.sh"
-#!/bin/bash
+sudo wget https://github.com/dword32bit/dynamic-mobsf/releases/download/frida/run_mobsf.sh -O /opt/dynamic-mobsf/run_mobsf.sh
 
-export ANDROID_HOME="$ANDROID_SDK_DIR"
-export PATH="\$ANDROID_HOME/emulator:\$ANDROID_HOME/platform-tools:\$PATH"
-
-\$ANDROID_HOME/emulator/emulator -avd $AVD_NAME -writable-system -selinux permissive -no-snapshot-load -no-boot-anim &
-
-adb wait-for-device
-sleep 10
-adb root
-sleep 2
-adb remount
-sleep 2
-adb push "$INSTALL_DIR/frida/frida-server" /data/local/tmp/
-adb shell chmod +x /data/local/tmp/frida-server
-adb shell /data/local/tmp/frida-server &
-
-cd "$MOBSF_DIR"
-poetry run gunicorn -b 127.0.0.1:8000 mobsf.MobSF.wsgi:application --workers=1 --threads=10 --timeout=3600
-EOF
-
-chmod +x "$INSTALL_DIR/run_dynamic_mobsf.sh"
+chmod +x "$INSTALL_DIR/run_mobsf.sh"
 
 echo "[✅] Setup complete! Run this to start MobSF + Emulator:"
 echo "bash $INSTALL_DIR/run_dynamic_mobsf.sh"
